@@ -1,29 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Declaración del tipo de documento HTML5 -->
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formularios en HTML</title>
-<!-- Libreria de iconos en linea -->
+    <!-- Configuración para el soporte de caracteres especiales y acentos (UTF-8) -->
+    <meta charset="UTF-8">
+    <!-- Ajuste para adaptar la pantalla a dispositivos móviles (diseño responsivo) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Formularios en HTML</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
-awesome/7.3.1/css/all.min.css">
-
+    <!-- Enlace a la librería de íconos Font Awesome (se corrigió la URL sin saltos de línea) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <h2>Formularios con Radioboton</h2>
-        <form action="" method="post">
-            Ingresa tu nombre:
-            <input type="text" name="nombre">
-            <br>
-            Selecciona el maximo de estudios que tienes:
-            <br>
-            <input type="radio" name="estudios" value="1">Sin estudios <br>
-            <input type="radio" name="estudios" value="2">Primaria <br>
-            <input type="radio" name="estudios" value="3">Secundaria <br>
-            <input type="radio" name="estudios" value="4">Preparatoria <br>
-            <input type="submit" value="enviar">
-            <input type="reset" value="borrar">
-        </form>
+
+    <!-- Encabezado principal de la sección -->
+    <h2>Formularios con Radiobotón</h2>
+
+    <!-- Formulario principal.
+         action: URL de destino de los datos (vacío = envía a la misma página).
+         method: "post" envía los datos de manera oculta en la petición HTTP. -->
+    <form action="" method="post">
+
+        <!-- Etiqueta de texto y campo de entrada de texto libre -->
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+
+        <!-- Indicación para el usuario -->
+        Selecciona el máximo de estudios que tienes:
+        <br>
+
+        <!-- 
+            Grupo de botones de opción (radio buttons).
+            IMPORTANTE: Todos comparten el mismo 'name="estudios"' para formar un grupo exclusivo 
+            (el usuario solo puede seleccionar UNA sola opción a la vez). 
+            'value' indica el valor que se enviará al servidor según la opción elegida.
+        -->
+        <input type="radio" name="estudios" value="1"> Sin estudios <br>
+        <input type="radio" name="estudios" value="2"> Primaria <br>
+        <input type="radio" name="estudios" value="3"> Secundaria <br>
+        <input type="radio" name="estudios" value="4"> Preparatoria <br>
+
+        <!-- Botón para procesar y enviar la información del formulario -->
+        <input type="submit" value="Enviar">
+
+        <!-- Botón para restablecer y borrar la selección de todos los campos -->
+        <input type="reset" value="Borrar">
+
+    </form>
+
 </body>
 </html>
