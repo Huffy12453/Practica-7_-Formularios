@@ -1,23 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Declaración del tipo de documento HTML5 -->
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formularios en HTML</title>
-<!-- Libreria de iconos en linea -->
+    <!-- Configuración para el soporte de caracteres especiales y acentos (UTF-8) -->
+    <meta charset="UTF-8">
+    <!-- Ajuste para adaptar la pantalla a dispositivos móviles (diseño responsivo) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Formularios en HTML</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
-awesome/7.3.1/css/all.min.css">
-
+    <!-- Enlace a la librería de íconos Font Awesome (se corrigió el salto de línea en la URL) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- Encabezado principal de la página -->
     <h2>Formulario con botones</h2>
-        <form action="" method="post">
-            Ingresa tu nombre:
-            <input type="text" name="nombre">
-            <br>
-            <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i> </button>
-            <button type="reset">Borrar <i class="fa fa-trash"></i></button>
-        </form>
+
+    <!-- Formulario principal.
+         action: URL destino de los datos (vacío = envía a la misma página).
+         method: "post" para enviar los datos de forma segura en la petición HTTP. -->
+    <form action="" method="post">
+
+        <!-- Campo de entrada para ingresar texto -->
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+
+        <!-- 
+            BOTÓN DE ENVÍO (type="submit"):
+            Procesa y envía los datos del formulario al servidor.
+            Ventaja del elemento <button>: Permite incluir código HTML en su interior, 
+            como texto acompañado de íconos (etiqueta <i>).
+        -->
+        <button type="submit">
+            Enviar <i class="fa-regular fa-paper-plane"></i>
+        </button>
+
+        <!-- 
+            BOTÓN DE REINICIO (type="reset"):
+            Restablece todos los campos del formulario a sus valores predeterminados o los limpia.
+        -->
+        <button type="reset">
+            Borrar <i class="fa fa-trash"></i>
+        </button>
+
+    </form>
+
 </body>
 </html>
