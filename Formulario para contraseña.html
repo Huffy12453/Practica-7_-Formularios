@@ -1,25 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Declaración del tipo de documento HTML5 -->
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formularios en HTML</title>
-<!-- Libreria de iconos en linea -->
+    <!-- Configuración para el soporte de caracteres especiales y acentos (UTF-8) -->
+    <meta charset="UTF-8">
+    <!-- Ajuste para adaptar la pantalla a dispositivos móviles (diseño responsivo) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Formularios en HTML</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
-awesome/7.3.1/css/all.min.css">
-
+    <!-- Enlace a la librería de íconos Font Awesome (se corrigió el salto de línea en la URL) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- Encabezado principal del formulario -->
     <h2>Formulario para contraseñas</h2>
-        <form action="" method="post">
-            Ingresa tu usuario:
-            <input type="text" name="usuario">
-           Ingresa tu contraseña:
-            <input type="password" name="pass">
-            <br>
-            <input type="submit" value="enviar">
-            <input type="reset" value="borrar">
-        </form>
+
+    <!-- Formulario principal.
+         action: URL de destino de los datos (vacío = envía a la misma página).
+         method: "post" envía los datos de manera oculta (imprescindible para contraseñas). -->
+    <form action="" method="post">
+
+        <!-- Campo de texto estándar para el nombre de usuario -->
+        Ingresa tu usuario:
+        <input type="text" name="usuario">
+        <br>
+
+        <!-- 
+            Campo de contraseña: 
+            type="password" enmascara los caracteres ingresados (mostrando puntos o asteriscos)
+            para evitar que la clave sea visible en la pantalla.
+        -->
+        Ingresa tu contraseña:
+        <input type="password" name="pass">
+        <br>
+
+        <!-- Botón para procesar y enviar el usuario y la clave al servidor -->
+        <input type="submit" value="Enviar">
+
+        <!-- Botón para restablecer y borrar el texto de ambos campos -->
+        <input type="reset" value="Borrar">
+
+    </form>
+
 </body>
 </html>
