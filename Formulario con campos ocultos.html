@@ -1,24 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Declaración del tipo de documento HTML5 -->
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formularios en HTML</title>
-<!-- Libreria de iconos en linea -->
+    <!-- Configuración para el soporte de caracteres especiales y acentos (UTF-8) -->
+    <meta charset="UTF-8">
+    <!-- Ajuste para adaptar la pantalla a dispositivos móviles (diseño responsivo) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Formularios en HTML</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
-awesome/7.3.1/css/all.min.css">
-
+    <!-- Enlace a la librería de íconos Font Awesome (se corrigió el salto de línea en la URL) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- Encabezado principal del formulario -->
     <h2>Formulario con campos ocultos</h2>
-        <form action="" method="post">
-            <input type="hidden" name="hora" value="3:30">
-            Ingresa tu nombre:
-            <input type="text" name="nombre">
-            <br>
-            <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i> </button>
-            <button type="reset">Borrar <i class="fa fa-trash"></i></button>
-        </form>
+
+    <!-- Formulario principal para el envío de datos -->
+    <form action="" method="post">
+
+        <!-- 
+            CAMPO OCULTO (type="hidden"):
+            No se muestra visualmente en la pantalla del usuario, pero su valor ("value") 
+            SÍ se envía al servidor cuando se procesa el formulario.
+            Casos de uso comunes: Enviar horas/timestamps, IDs de usuario, tokens de seguridad o IDs de sesión.
+        -->
+        <input type="hidden" name="hora" value="3:30">
+
+        <!-- Campo visible estándar para ingresar el nombre del usuario -->
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+
+        <!-- Botón de envío del formulario con ícono de avión de papel -->
+        <button type="submit">
+            Enviar <i class="fa-regular fa-paper-plane"></i>
+        </button>
+
+        <!-- Botón de reinicio para limpiar los campos del formulario con ícono de papelera -->
+        <button type="reset">
+            Borrar <i class="fa fa-trash"></i>
+        </button>
+
+    </form>
+
 </body>
 </html>
