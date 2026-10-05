@@ -1,29 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Declaración del tipo de documento HTML5 -->
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formularios en HTML</title>
-<!-- Libreria de iconos en linea -->
+    <!-- Configuración de caracteres para soportar acentos y caracteres especiales (UTF-8) -->
+    <meta charset="UTF-8">
+    <!-- Configuración para diseño responsivo en dispositivos móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Formularios en HTML</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
-awesome/7.3.1/css/all.min.css">
-
+    <!-- Enlace a la librería de íconos Font Awesome (se corrigió el salto de línea en la URL) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- Encabezado principal del formulario -->
     <h2>Formulario con text area</h2>
-        <form action="" method="post">
-            Ingresa tu nombre:
-            <input type="text" name="nombre">
-            <br>
-            Ingresa tu correo:
-            <input type="email" name="correo">
-            <br>
-            Ingresa tus comentarios:
-            <textarea name="comentarios" rows="1" cols="10"></textarea>
-            <br>
-            <input type="submit" value="enviar">
-            <input type="reset" value="borrar">
-        </form>
+
+    <!-- Formulario principal.
+         action: URL a la que se envían los datos (vacío = envía a la misma página).
+         method: "post" envía los datos de manera oculta al servidor. -->
+    <form action="" method="post">
+
+        <!-- Campo para entrada de texto libre estándar -->
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+
+        <!-- 
+            Campo especializado para correo electrónico:
+            type="email" valida automáticamente que el texto ingresado 
+            tenga un formato de email válido (ejemplo: usuario@dominio.com) antes de enviar.
+        -->
+        Ingresa tu correo:
+        <input type="email" name="correo">
+        <br>
+
+        <!-- 
+            Área de texto de múltiples líneas (<textarea>):
+            Permite ingresar textos largos o comentarios.
+            rows="1": Define el alto inicial en líneas de texto.
+            cols="10": Define el ancho inicial en columnas/caracteres.
+        -->
+        Ingresa tus comentarios:
+        <textarea name="comentarios" rows="1" cols="10"></textarea>
+        <br>
+
+        <!-- Botón para procesar y enviar la información del formulario -->
+        <input type="submit" value="Enviar">
+
+        <!-- Botón para limpiar todos los campos del formulario -->
+        <input type="reset" value="Borrar">
+
+    </form>
+
 </body>
 </html>
