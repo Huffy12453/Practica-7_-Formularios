@@ -1,25 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<!-- Declaración del tipo de documento HTML5 -->
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Formularios en HTML</title>
-<!-- Libreria de iconos en linea -->
+    <!-- Configuración para el soporte de caracteres especiales y acentos (UTF-8) -->
+    <meta charset="UTF-8">
+    <!-- Ajuste para adaptar la pantalla a dispositivos móviles (diseño responsivo) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Formularios en HTML</title>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-
-awesome/7.3.1/css/all.min.css">
-
+    <!-- Enlace a la librería de íconos Font Awesome (se corrigió la URL sin saltos de línea) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+
+    <!-- Encabezado principal del formulario -->
     <h2>Formulario con archivos</h2>
-        <form action="" method="post">
-            Ingresa tu nombre:
-            <input type="text" name="nombre">
-            <br>
-            <input type="file" name="archivo">
-            <br>
-            <button type="submit">Enviar <i class="fa-regular fa-paper-plane"></i> </button>
-            <button type="reset">Borrar <i class="fa fa-trash"></i></button>
-        </form>
+
+    <!-- 
+        Formulario principal:
+        action: URL de destino donde se procesarán los datos.
+        method: "post" es obligatorio cuando se adjuntan archivos.
+        NOTA: Para enviar archivos al servidor de forma real, se debe agregar el atributo 
+        enctype="multipart/form-data" dentro de la etiqueta <form>.
+    -->
+    <form action="" method="post" enctype="multipart/form-data">
+
+        <!-- Campo de texto estándar para ingresar el nombre -->
+        Ingresa tu nombre:
+        <input type="text" name="nombre">
+        <br>
+
+        <!-- 
+            CAMPO DE SELECCIÓN DE ARCHIVOS (type="file"):
+            Abre la ventana del sistema operativo para que el usuario seleccione 
+            un archivo desde su dispositivo (imágenes, documentos, PDF, etc.).
+        -->
+        <input type="file" name="archivo">
+        <br>
+
+        <!-- Botón de envío del formulario con ícono de avión de papel -->
+        <button type="submit">
+            Enviar <i class="fa-regular fa-paper-plane"></i>
+        </button>
+
+        <!-- Botón para limpiar los campos y la selección de archivo con ícono de papelera -->
+        <button type="reset">
+            Borrar <i class="fa fa-trash"></i>
+        </button>
+
+    </form>
+
 </body>
 </html>
